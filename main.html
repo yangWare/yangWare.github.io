@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Drag Demo 1 </title>
+    <style type="text/css">
+        #drag{
+            width:100px;
+            height:20px;
+            background-color:#eee;
+            border:1px solid #333;
+            position:absolute;
+            top:30px;
+            left:200px;
+            text-align:center;
+            cursor:move;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+            drag(document.getElementById('drag'));
+        };
+
+        function drag(o){
+            o.onmousedown=function(a){
+                var d=document;if(!a)a=window.event;
+                var x=a.layerX?a.layerX:a.offsetX;
+                var y=a.layerY?a.layerY:a.offsetY;
+
+                d.onmousemove=function(a){
+                    if(!a)a=window.event;
+                    if(!a.pageX)a.pageX=a.clientX;
+                    if(!a.pageY)a.pageY=a.clientY;
+                    var tx=a.pageX-x,ty=a.pageY-y;
+                    o.style.left=tx;
+                    o.style.top=ty;
+                };
+
+                d.onmouseup=function(){
+                    if(o.releaseCapture) {
+                        o.releaseCapture();
+                    } else if(window.captureEvents) {
+                        window.captureEvents(Event.MOUSEMOVE|Event.MOUSEUP);
+                    }
+                    d.onmousemove=null;
+                    d.onmouseup=null;
+                };
+            };
+        }
+    </script>
+</head>
+
+<body>
+<p>
+    我在 <time datetime="2008-02-14">情人节</time> 有个约会。
+</p>
+<div id="drag">drag me</div>
+</body>
+</html>
