@@ -182,7 +182,6 @@
         .me-introduce {
             padding: 10px 20px 10px 20px;
             color: #ffffff;
-            font-size: 20px;
             font-family: "微软雅黑 Light";
         }
         .content2-text {
@@ -254,6 +253,74 @@
         #content1 {
             z-index: 1;
         }
+
+        @media screen and (max-device-width: 767px) {
+            body {
+                margin: 0;
+                font-size: 14px;
+            }
+
+            #container {
+                max-width: 100%;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                background: rgba(0, 0, 0, 0.85);
+                overflow: hidden;
+                padding: 0;
+                margin: 0;
+                -webkit-border-radius: 7px;
+                -moz-border-radius: 7px;
+                -ms-border-radius: 7px;
+                border-radius: 7px;
+                -webkit-transition: 0.5s;
+                -o-transition: 0.5s;
+                transition: 0.5s;
+            }
+
+            .menu-text {
+                display: none
+            }
+
+            #content2 i {
+                font-size: 40px;
+            }
+
+            .content2-list {
+                font-size: 14px;
+                padding-left: 80px;
+            }
+
+            .bar-container {
+                padding: 0;
+            }
+
+            .bar {
+                margin-left: 10px;
+            }
+
+            .active-content .html5-bar {
+                width: 160px;
+            }
+            .active-content .css3-bar {
+                width: 154px;
+            }
+            .active-content .javaScript-bar {
+                width: 200px;
+            }
+            .active-content .vueJs-bar {
+                width: 120px;
+            }
+            .active-content .webpack-bar {
+                width: 80px;
+            }
+            .active-content .mongodb-bar {
+                width: 104px;
+            }
+            .active-content .java-bar {
+                width: 120px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -292,7 +359,7 @@
             <div class="me-name">杨磊<span style="font-size: 20px; color: #dd3333">  前端</span></div>
             <div class="me-introduce">
                 <p>本人勤奋好学，学习能力较强，有团队精神，语言表达能力较好，能快速融入新环境和团队。</p>
-                <p>对前端有着极大的热情，尤其对JS这门自由的语言有着执着的喜爱。平时花了大量时间用在学习钻研前端的开发上，使用nodeJs做过聊天室、<a href="http://139.199.7.44/users/main.html" title="点击跳转游戏网址,请使用手机或浏览器移动调试模式打开" style="color: #17e7a4">文字类网页游戏(目前只适配手机端)</a>，目前游戏部署在腾讯云上。</p>
+                <p>对前端有着极大的热情，尤其对JS这门自由的语言有着执着的喜爱。平时花了大量时间用在学习钻研前端的开发上，使用nodeJs做过聊天室、<a href="http://139.199.7.44/users/main.html" title="点击跳转游戏网址" style="color: #17e7a4">文字类网页游戏</a>，目前游戏部署在腾讯云上。</p>
                 <p>经常浏览技术博客，偶尔也会分享一些所学技术或所遇难题的解决方案。</p>
             </div>
         </div>
