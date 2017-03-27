@@ -59,6 +59,65 @@
             animation: one_three_translate 2s infinite linear;
         }
 
+        .two_common {
+            display: inline-block;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            margin-top: 80px;
+            border-radius: 15px;
+        }
+
+        .two_one_common {
+            left: 10%
+        }
+
+        .two_two_common {
+            left: 45%
+        }
+
+        .two_three_common {
+            left: 80%
+        }
+
+        .two_one_one {
+            background-color: #0099CC;
+            transform-origin: 0 0 30px;
+            animation: two_one_one_rotate3d 2s infinite linear;
+        }
+
+        .two_one_two {
+            background-color: #FF0033;
+            transform-origin: 0 0 30px;
+            animation: two_one_two_rotate3d 2s infinite linear;
+        }
+
+        .two_two_one {
+            background-color: #0099CC;
+            animation: two_two_one_transform 4s infinite linear;
+        }
+
+        .two_two_two {
+            background-color: #FF0033;
+            animation: two_two_two_transform 4s infinite linear;
+        }
+
+        .two_three_one {
+            background-color: #0099CC;
+            animation: two_three_one_transform 4s infinite linear;
+        }
+
+        .two_three_two {
+            background-color: #FF0033;
+            animation: two_three_two_transform 4s infinite linear;
+        }
+
+        .two_three_three {
+            background-color: #FFCC00;
+            transform: translateX(50px) scale(0.75);
+            animation: two_three_three_transform 4s infinite linear;
+        }
+
         @keyframes one_one_rotate {
 
             50% {
@@ -149,6 +208,253 @@
                 transform: translateY(0);
             }
         }
+
+        @keyframes two_one_one_rotate3d {
+            0% {
+                transform: rotateY(90deg);
+            }
+            25% {
+                transform: rotateY(180deg);
+            }
+            50% {
+                transform: rotateY(270deg);
+                z-index: 1;
+            }
+            75% {
+                transform: rotateY(360deg);
+            }
+
+            100% {
+                transform: rotateY(450deg);
+                z-index: 0;
+            }
+        }
+
+        @keyframes two_one_two_rotate3d {
+            0% {
+                transform: rotateY(-90deg);
+            }
+            25% {
+                transform: rotateY(0deg);
+            }
+            50% {
+                transform: rotateY(90deg);
+            }
+            75% {
+                transform: rotateY(180deg);
+            }
+
+            100% {
+                transform: rotateY(270deg);
+            }
+        }
+
+        @keyframes two_two_one_transform {
+            0% {
+                 transform: translateX(-50px) scale(0.75);
+            }
+            25% {
+                transform: translateX(0) scale(0.5);
+            }
+            50% {
+                transform: translateX(50px) scale(0.75);
+            }
+            75% {
+                transform: translateX(0) scale(1);
+                z-index: 1;
+            }
+            100% {
+                transform: translateX(-50px) scale(0.75);
+                z-index: 0;
+            }
+        }
+
+        @keyframes two_two_two_transform {
+            0% {
+                transform: translateX(50px) scale(0.75);
+            }
+            25% {
+                transform: translateX(0) scale(1);
+            }
+            50% {
+                transform: translateX(-50px) scale(0.75);
+            }
+            75% {
+                transform: translateX(0) scale(0.5);
+            }
+            100% {
+                transform: translateX(50px) scale(0.75);
+            }
+        }
+
+        @keyframes two_three_one_transform {
+            0% {
+                transform: translateX(-50px) scale(0.75);
+            }
+
+            5.66% {
+                transform: translateX(-50px) scale(0.75);
+            }
+
+            11.16% {
+                transform: translateX(-25px) scale(0.5);
+            }
+
+            16.66% {
+                transform: translateX(0) scale(0.75);
+            }
+
+            22.32% {
+                transform: translateX(0) scale(0.75);
+            }
+
+            27.82% {
+                transform: translateX(25px) scale(1);
+                z-index: 1;
+            }
+
+            33.32% {
+                transform: translateX(50px) scale(0.75);
+            }
+
+            55.68% {
+                transform: translateX(50px) scale(0.75);
+            }
+
+            61.18% {
+                transform: translateX(25px) scale(0.5);
+                z-index: 0;
+            }
+
+            66.68% {
+                transform: translateX(0) scale(0.75);
+            }
+
+            72.34% {
+                transform: translateX(0) scale(0.75);
+            }
+
+            77.84% {
+                transform: translateX(-25px) scale(1);
+                z-index: 1;
+            }
+
+            83.34% {
+                transform: translateX(-50px) scale(0.75);
+                z-index: 0;
+            }
+
+            100% {
+                transform: translateX(-50px) scale(0.75);
+            }
+        }
+
+        @keyframes two_three_two_transform {
+            0% {
+                transform: translateX(0) scale(0.75);
+            }
+            5.66% {
+                transform: translateX(0) scale(0.75);
+            }
+
+            11.16% {
+                transform: translateX(-25px) scale(1);
+            }
+
+            16.66% {
+                transform: translateX(-50px) scale(0.75);
+            }
+
+            38.98% {
+                transform: translateX(-50px) scale(0.75);
+            }
+
+            44.48% {
+                transform: translateX(-25px) scale(0.5);
+            }
+
+            49.98% {
+                transform: translateX(0) scale(0.75);
+            }
+
+            55.68% {
+                transform: translateX(0) scale(0.75);
+            }
+
+            61.18% {
+                transform: translateX(25px) scale(1);
+            }
+
+            66.68% {
+                transform: translateX(50px) scale(0.75);
+            }
+
+            89% {
+                transform: translateX(50px) scale(0.75);
+            }
+
+            94.5% {
+                transform: translateX(25px) scale(0.5);
+            }
+
+            100% {
+                transform: translateX(0) scale(0.75);
+            }
+        }
+
+        @keyframes two_three_three_transform {
+            0% {
+                transform: translateX(50px) scale(0.75);
+            }
+
+            22.32% {
+                transform: translateX(50px) scale(0.75);
+            }
+
+            27.82% {
+                transform: translateX(25px) scale(0.5);
+            }
+
+            33.32% {
+                transform: translateX(0) scale(0.75);
+            }
+
+            38.98% {
+                transform: translateX(0) scale(0.75);
+            }
+
+            44.48% {
+                transform: translateX(-25px) scale(1);
+            }
+
+            49.98% {
+                transform: translateX(-50px) scale(0.75);
+            }
+
+            72.34% {
+                transform: translateX(-50px) scale(0.75);
+            }
+
+            77.84% {
+                transform: translateX(-25px) scale(0.5);
+            }
+
+            83.34% {
+                transform: translateX(0) scale(0.75);
+            }
+
+            89% {
+                transform: translateX(0) scale(0.75);
+            }
+
+            94.5% {
+                transform: translateX(25px) scale(1);
+            }
+
+            100% {
+                transform: translateX(50px) scale(0.75);
+            }
+        }
     </style>
 </head>
 <body>
@@ -158,7 +464,21 @@
         <span class="one_two"></span>
         <span class="one_three"></span>
     </div>
-    <div></div>
+    <div>
+        <div class="two_one">
+            <span class="two_common two_one_common two_one_one"></span>
+            <span class="two_common two_one_common two_one_two"></span>
+        </div>
+        <div class="two_two">
+            <span class="two_common two_two_common two_two_one"></span>
+            <span class="two_common two_two_common two_two_two"></span>
+        </div>
+        <div>
+            <span class="two_common two_three_common two_three_one"></span>
+            <span class="two_common two_three_common two_three_two"></span>
+            <span class="two_common two_three_common two_three_three"></span>
+        </div>
+    </div>
     <div></div>
     <div></div>
     <div></div>
