@@ -34,9 +34,13 @@
 <script>
     var array = ['软件开发','数字媒体', '数据管理','物联网'];
     var resultNum;
-    document.getElementById('selectBtn').addEventListener('click',function() {
-        resultNum = resultNum || parseInt(Math.random()*4);
-        alert('抽取结果为：'+array[resultNum]);
-    });
+    try {
+        document.getElementById('selectBtn').addEventListener('click',function() {
+            resultNum = resultNum || parseInt(Math.random()*4);
+            alert('抽取结果为：'+array[resultNum]);
+        });
+    } catch (e) {
+        alert(e);
+    }
 </script>
 </html>
