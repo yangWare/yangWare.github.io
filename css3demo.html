@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3小动画</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        #container {
+            background-color: antiquewhite;
+            padding: 0 100px;
+        }
+        #container>div:nth-child(odd) {
+            background-color: #cccccc;
+        }
+        #container>div:nth-child(even) {
+            background-color: #66CC99;
+        }
+        #container>div {
+            position: relative;
+            height: 200px;
+        }
+        .one_one {
+            display: inline-block;
+            position: absolute;
+            left: 10%;
+            width: 50px;
+            height: 50px;
+            margin-top: 10px;
+            border-radius: 25px;
+            background-color: #FFFF99;
+            transform-origin: 25px 75px;
+            animation: one_one_rotate 2s infinite linear;
+        }
+
+        .one_two {
+            display: inline-block;
+            position: absolute;
+            left: 40%;
+            width: 150px;
+            height: 180px;
+            margin-top: 10px;
+            border-radius: 10px;
+            background-color: #dd3333;
+            animation: one_two_rotate 10s infinite;
+        }
+
+        .one_three {
+            display: inline-block;
+            position: absolute;
+            left: 80%;
+            width: 50px;
+            height: 50px;
+            margin-top: 60px;
+            border-radius: 25px;
+            background-color: #0099CC;
+            transform-origin: 25px 75px;
+            animation: one_three_translate 2s infinite linear;
+        }
+
+        .two_common {
+            display: inline-block;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            margin-top: 80px;
+            border-radius: 15px;
+        }
+
+        .two_one_common {
+            left: 10%
+        }
+
+        .two_two_common {
+            left: 45%
+        }
+
+        .two_three_common {
+            left: 80%
+        }
+
+        .two_one_one {
+            background-color: #0099CC;
+            transform-origin: 0 0 30px;
+            animation: two_one_one_rotate3d 2s infinite linear;
+        }
+
+        .two_one_two {
+            background-color: #FF0033;
+            transform-origin: 0 0 30px;
+            animation: two_one_two_rotate3d 2s infinite linear;
+        }
+
+        .two_two_one {
+            background-color: #0099CC;
+            animation: two_two_one_transform 4s infinite linear;
+        }
+
+        .two_two_two {
+            background-color: #FF0033;
+            animation: two_two_two_transform 4s infinite linear;
+        }
+
+        .two_three_one {
+            background-color: #0099CC;
+            animation: two_three_one_transform 4s infinite linear;
+        }
+
+        .two_three_two {
+            background-color: #FF0033;
+            animation: two_three_two_transform 4s infinite linear;
+        }
+
+        .two_three_three {
+            background-color: #FFCC00;
+            transform: translateX(50px) scale(0.75);
+            animation: two_three_three_transform 4s infinite linear;
+        }
+
+        @keyframes one_one_rotate {
+
+            50% {
+                box-shadow: 0 0 50px #FF9900;
+            }
+
+            to {
+                transform: rotate(360deg);
+                box-shadow: 0 0 0 #FF9900;
+            }
+        }
+
+        @keyframes one_two_rotate {
+            10% {
+                transform: rotateY(90deg);
+                background-color: #dd3333;
+            }
+
+            11% {
+                background-color: #003399;
+            }
+
+            30% {
+                transform: rotateY(270deg);
+                background-color: #003399;
+            }
+
+            31% {
+                background-color: #FFFF00;
+            }
+
+            50% {
+                transform: rotateY(450deg);
+                background-color: #FFFF00;
+            }
+
+            51% {
+                background-color: #FF9900;
+            }
+
+            70% {
+                transform: rotateY(630deg);
+                background-color: #FF9900;
+            }
+
+            71% {
+                background-color: #FF6666;
+            }
+
+            90% {
+                transform: rotateY(810deg);
+                background-color: #FF6666;
+            }
+
+            91% {
+                background-color: #dd3333;
+            }
+
+            100% {
+                transform: rotateY(900deg);
+                background-color: #dd3333;
+            }
+        }
+
+        @keyframes one_three_translate {
+            8.3% {
+                transform: translateX(-50px);
+            }
+            25% {
+                transform: translateX(50px);
+            }
+            41.5% {
+                transform: translateX(-50px);
+            }
+            50% {
+                transform: translateX(0);
+            }
+            58.3% {
+                transform: translateY(-50px);
+            }
+            75% {
+                transform: translateY(50px);
+            }
+            91.5% {
+                transform: translateY(-50px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes two_one_one_rotate3d {
+            0% {
+                transform: rotateY(90deg);
+            }
+            25% {
+                transform: rotateY(180deg);
+                z-index: 1;
+            }
+            50% {
+                transform: rotateY(270deg);
+                z-index: 1;
+            }
+            75% {
+                transform: rotateY(360deg);
+            }
+
+            100% {
+                transform: rotateY(450deg);
+            }
+        }
+
+        @keyframes two_one_two_rotate3d {
+            0% {
+                transform: rotateY(-90deg);
+            }
+            25% {
+                transform: rotateY(0deg);
+            }
+            50% {
+                transform: rotateY(90deg);
+            }
+            75% {
+                transform: rotateY(180deg);
+            }
+
+            100% {
+                transform: rotateY(270deg);
+            }
+        }
+
+        @keyframes two_two_one_transform {
+            0% {
+                 transform: translateX(-50px) scale(0.75);
+            }
+            25% {
+                transform: translateX(0) scale(0.5);
+            }
+            50% {
+                transform: translateX(50px) scale(0.75);
+            }
+            
+            62.5% {
+                z-index: 1
+            }
+
+            75% {
+                transform: translateX(0) scale(1);
+                z-index: 1;
+            }
+            
+            87.5% {
+                z-index: 1;
+            }
+            
+            100% {
+                transform: translateX(-50px) scale(0.75);
+            }
+        }
+
+        @keyframes two_two_two_transform {
+            0% {
+                transform: translateX(50px) scale(0.75);
+            }
+            25% {
+                transform: translateX(0) scale(1);
+            }
+            50% {
+                transform: translateX(-50px) scale(0.75);
+            }
+            75% {
+                transform: translateX(0) scale(0.5);
+            }
+            100% {
+                transform: translateX(50px) scale(0.75);
+            }
+        }
+
+        @keyframes two_three_one_transform {
+            0% {
+                transform: translateX(-50px) scale(0.75);
+            }
+
+            5.66% {
+                transform: translateX(-50px) scale(0.75);
+            }
+
+            11.16% {
+                transform: translateX(-25px) scale(0.5);
+            }
+
+            16.66% {
+                transform: translateX(0) scale(0.75);
+                z-index: 0;
+            }
+
+            22.32% {
+                transform: translateX(0) scale(0.75);
+                z-index: 1;
+            }
+
+            27.82% {
+                transform: translateX(25px) scale(1);
+                z-index: 1;
+            }
+
+            33.32% {
+                transform: translateX(50px) scale(0.75);
+                z-index: 1;
+            }
+
+            55.68% {
+                transform: translateX(50px) scale(0.75);
+                z-index: 0;
+            }
+
+            61.18% {
+                transform: translateX(25px) scale(0.5);
+            }
+
+            66.68% {
+                transform: translateX(0) scale(0.75);
+                z-index: 0;
+            }
+
+            72.34% {
+                transform: translateX(0) scale(0.75);
+                z-index: 1;
+            }
+
+            77.84% {
+                transform: translateX(-25px) scale(1);
+                z-index: 1;
+            }
+
+            83.34% {
+                transform: translateX(-50px) scale(0.75);
+                z-index: 1;
+            }
+
+            100% {
+                transform: translateX(-50px) scale(0.75);
+                z-index: 0;
+            }
+        }
+
+        @keyframes two_three_two_transform {
+            0% {
+                transform: translateX(0) scale(0.75);
+            }
+            5.66% {
+                transform: translateX(0) scale(0.75);
+            }
+
+            11.16% {
+                transform: translateX(-25px) scale(1);
+            }
+
+            16.66% {
+                transform: translateX(-50px) scale(0.75);
+            }
+
+            38.98% {
+                transform: translateX(-50px) scale(0.75);
+            }
+
+            44.48% {
+                transform: translateX(-25px) scale(0.5);
+            }
+
+            49.98% {
+                transform: translateX(0) scale(0.75);
+            }
+
+            55.68% {
+                transform: translateX(0) scale(0.75);
+            }
+
+            61.18% {
+                transform: translateX(25px) scale(1);
+            }
+
+            66.68% {
+                transform: translateX(50px) scale(0.75);
+            }
+
+            89% {
+                transform: translateX(50px) scale(0.75);
+            }
+
+            94.5% {
+                transform: translateX(25px) scale(0.5);
+            }
+
+            100% {
+                transform: translateX(0) scale(0.75);
+            }
+        }
+
+        @keyframes two_three_three_transform {
+            0% {
+                transform: translateX(50px) scale(0.75);
+            }
+
+            22.32% {
+                transform: translateX(50px) scale(0.75);
+            }
+
+            27.82% {
+                transform: translateX(25px) scale(0.5);
+            }
+
+            33.32% {
+                transform: translateX(0) scale(0.75);
+            }
+
+            38.98% {
+                transform: translateX(0) scale(0.75);
+            }
+
+            44.48% {
+                transform: translateX(-25px) scale(1);
+            }
+
+            49.98% {
+                transform: translateX(-50px) scale(0.75);
+            }
+
+            72.34% {
+                transform: translateX(-50px) scale(0.75);
+            }
+
+            77.84% {
+                transform: translateX(-25px) scale(0.5);
+            }
+
+            83.34% {
+                transform: translateX(0) scale(0.75);
+            }
+
+            89% {
+                transform: translateX(0) scale(0.75);
+            }
+
+            94.5% {
+                transform: translateX(25px) scale(1);
+            }
+
+            100% {
+                transform: translateX(50px) scale(0.75);
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div>
+        <span class="one_one"></span>
+        <span class="one_two"></span>
+        <span class="one_three"></span>
+    </div>
+    <div>
+        <div class="two_one">
+            <span class="two_common two_one_common two_one_one"></span>
+            <span class="two_common two_one_common two_one_two"></span>
+        </div>
+        <div class="two_two">
+            <span class="two_common two_two_common two_two_one"></span>
+            <span class="two_common two_two_common two_two_two"></span>
+        </div>
+        <div>
+            <span class="two_common two_three_common two_three_one"></span>
+            <span class="two_common two_three_common two_three_two"></span>
+            <span class="two_common two_three_common two_three_three"></span>
+        </div>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</body>
+</html>

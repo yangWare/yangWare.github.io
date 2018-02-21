@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>选方向</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .common {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            position: relative;
+            top: 100px;
+        }
+
+        #selectBtn {
+            background-color: #d6e9c6;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        #selectBtn:active {
+            background-color: #468847;
+        }
+    </style>
+</head>
+<body>
+<div id="selectBtn" class="common">选择</div>
+</body>
+<script>
+    var array = ['软件开发','数字媒体', '数据管理','物联网'];
+    var resultNum;
+    try {
+        document.getElementById('selectBtn').addEventListener('click',function() {
+            resultNum = resultNum || parseInt(Math.random()*4);
+            alert('抽取结果为：'+array[resultNum]);
+        });
+    } catch (e) {
+        alert(e);
+    }
+</script>
+</html>
